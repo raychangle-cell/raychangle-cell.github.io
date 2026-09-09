@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Video, Podcast, Poster &amp; Web | Ray Chang</title>
+  <meta name="description" content="Ray Chang's multi-media portfolio: video production, podcast series, poster and campaign design, and web projects built with traditional tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* modal */
+    .modal {
+      position: fixed; inset: 0; z-index: 200;
+      display: none; align-items: center; justify-content: center;
+      background: rgba(5, 6, 9, 0.82); backdrop-filter: blur(6px); padding: 5%;
+    }
+    .modal.open { display: flex; }
+    .modal-box {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 18px; max-width: 760px; width: 100%;
+      max-height: 86vh; overflow-y: auto; position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 14px; right: 16px; z-index: 2;
+      background: var(--bg-elev); border: 1px solid var(--border);
+      color: var(--muted); width: 32px; height: 32px; border-radius: 8px;
+      font-size: 1.1rem; cursor: pointer; line-height: 1;
+    }
+    .modal-close:hover { color: var(--green); border-color: var(--green); }
+    .modal-media { width: 100%; max-height: 300px; object-fit: cover; background: var(--bg-elev); }
+    .modal-body { padding: 26px 28px 30px; }
+    .modal-body h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .modal-body .meta {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--green); font-weight: 700; margin-bottom: 18px;
+    }
+    .modal-body h4 {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--dim); font-weight: 700; margin: 20px 0 7px;
+    }
+    .modal-body p { color: var(--muted); font-size: 0.93rem; margin-bottom: 10px; }
+    .card-click { cursor: pointer; }
+    .modal-body .btn { margin-top: 22px; }
+    .sub-title .bar.a { background: var(--green); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ray <span>Chang</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Mediara AI</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<section style="padding-top:64px;">
+  <div class="section-label orange">Portfolio</div>
+  <h2>Video · Podcast · Poster · Web</h2>
+  <p class="lead">
+    Work produced with traditional multi-media tools — the craft foundation that Mediara AI builds on.
+  </p>
+
+  <div class="callout">
+    <strong>How this relates to Mediara AI:</strong> everything here was made the conventional way —
+    editing timelines by hand, designing each asset from scratch. Those projects are where the production
+    problems came from that the multi-agent engine now automates.
+  </div>
+
+  <!-- ============ VIDEO ============ -->
+  <div class="sub-group">
+    <h3 class="sub-title"><span class="bar v"></span>🎬 Video</h3>
+    <p class="sub-desc">Long-form video essays and short-form social content.</p>
+
+    <div class="grid grid-3">
+      <div class="card card-click" onclick="openM('m-nezha')">
+        <img src="video-poster.jpg" alt="Poster frame from the Ne Zha 2 video essay" class="card-img">
+        <div class="card-body">
+          <div class="card-label">Video Essay · 5 min</div>
+          <h3>Bridging Worlds: The Reception of Ne Zha 2</h3>
+          <p>A five-minute essay on how Chinese animation travels globally while keeping cultural authenticity.</p>
+          <div class="card-tools">Premiere Pro · Audition</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-fulu')">
+        <div class="card-body">
+          <div class="card-label">Short-Form · FULU</div>
+          <h3>Short-Video Content &amp; Social Strategy</h3>
+          <p>Platform-native short video produced inside a communication and marketing function.</p>
+          <div class="card-tools">CapCut Pro · Platform analytics · Summer 2024</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ AUDIO / PODCAST ============ -->
+  <div class="sub-group">
+    <h3 class="sub-title"><span class="bar a"></span>🎙️ Audio / Podcast</h3>
+    <p class="sub-desc">Research panels and interview series, produced end to end.</p>
+
+    <div class="grid grid-3">
+      <div class="card card-click" onclick="openM('m-podcast')">
+        <div class="card-body">
+          <div class="card-label">Research Podcast · 5 segments</div>
+          <h3>WellTech Talk: Aging &amp; Isolation</h3>
+          <p>A five-segment research panel translating a systematic review into accessible audio.</p>
+          <div class="card-tools">Audition · Avatar Voice AI</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-peerseries')">
+        <div class="card-body">
+          <div class="card-label">Interview Series</div>
+          <h3>Peer-Interview Podcast Series</h3>
+          <p>Hosted, recorded and edited interview episodes built around community discussion.</p>
+          <div class="card-tools">Audition · Community engagement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ POSTER ============ -->
+  <div class="sub-group">
+    <h3 class="sub-title"><span class="bar"></span>🖼️ Poster</h3>
+    <p class="sub-desc">Campaign and promotional print design.</p>
+
+    <div class="grid grid-3">
+      <div class="card card-click" onclick="openM('m-ford')">
+        <img src="ford-poster.jpg" alt="Ford F-150 Lightning promotional poster" class="card-img">
+        <div class="card-body">
+          <div class="card-label">Campaign Asset · CCT260</div>
+          <h3>Ford F-150 Lightning Poster</h3>
+          <p>Promotional poster for Ford's electric truck, from competitive analysis to final mockup.</p>
+          <div class="card-tools">Photoshop · Illustrator</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-airbnb')">
+        <img src="airbnb-hero.jpg" alt="Short-term rental hero image for the B&B campaign" class="card-img short">
+        <div class="card-body">
+          <div class="card-label">Multi-Platform Campaign</div>
+          <h3>B&amp;B Multi-Platform Marketing</h3>
+          <p>Seasonal campaigns across Airbnb and Vrbo, with QR-coded welcome gifts driving offline-to-online growth.</p>
+          <div class="card-tools">Canva · Adobe CC · Airbnb / Vrbo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ WEB ============ -->
+  <div class="sub-group">
+    <h3 class="sub-title"><span class="bar w"></span>🌐 Web</h3>
+    <p class="sub-desc">Front-end builds, UX audits and product case studies.</p>
+
+    <div class="grid grid-3">
+      <div class="card card-click" onclick="openM('m-eren')">
+        <div class="card-body">
+          <div class="card-label">Front-End · CCT260</div>
+          <h3>Eren Yeager Fan Page</h3>
+          <p>A five-page interactive fan site built from Figma wireframes to live deployment.</p>
+          <div class="card-tools">HTML · CSS · GitHub Pages · Figma</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-zara')">
+        <div class="card-body">
+          <div class="card-label">UX Audit · CCT260</div>
+          <h3>ZARA Website Audit &amp; Redesign</h3>
+          <p>Heuristic evaluation of ZARA Canada's store, then a full redesign of the key purchase flow.</p>
+          <div class="card-tools">Nielsen's heuristics · Journey mapping</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-legible')">
+        <div class="card-body">
+          <div class="card-label">UX Case Study · CCT305</div>
+          <h3>Legible — Bill Simplification</h3>
+          <p>A web app that makes everyday bills understandable through plain language and progressive disclosure.</p>
+          <div class="card-tools">Figma · Usability testing · UCD</div>
+        </div>
+      </div>
+
+      <div class="card card-click" onclick="openM('m-sce')">
+        <div class="card-body">
+          <div class="card-label">Platform Design · CCT318</div>
+          <h3>Smart Commute Exchange</h3>
+          <p>A tri-campus platform proposal encouraging students to choose transit over driving.</p>
+          <div class="card-tools">Interviews · Surveys · Journey maps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= MODALS ================= -->
+<div class="modal" id="m-nezha" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <img src="video-poster.jpg" alt="Ne Zha 2 video essay frame" class="modal-media">
+    <div class="modal-body">
+      <div class="meta">Video Essay · 5 minutes</div>
+      <h3>Bridging Worlds: The Reception of Ne Zha 2</h3>
+      <h4>Background</h4>
+      <p>An analysis of how a major Chinese animated film travels internationally while retaining cultural authenticity, structured with a Content Area Story framework.</p>
+      <h4>My role</h4>
+      <p>Produced end-to-end: script, voice-over recording, sound mixing, clip editing, motion graphics and text animation.</p>
+      <h4>Outcome</h4>
+      <p>A five-scene narrative covering domestic success, international reception, cultural barriers, and the outlook for Chinese cultural industries.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Premiere Pro</span><span class="tag">Audition</span><span class="tag">Motion graphics</span><span class="tag">Voice-over</span></div>
+      <a class="btn btn-primary btn-sm" href="https://6023d2ec6e184e03be8a565bae5a6953.bj6.agentos-app.net/#video" target="_blank" rel="noopener">Watch the video essay ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-fulu" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">Short-Form Video · Summer 2024</div>
+      <h3>FULU — Short-Video Content &amp; Social Strategy</h3>
+      <h4>Background</h4>
+      <p>Work within the communication and marketing function of a short-video platform, creating platform-native content for Instagram, TikTok and YouTube.</p>
+      <h4>My role</h4>
+      <p>Produced and edited short video, then iterated on format, timing and messaging using performance analytics.</p>
+      <h4>What I learned</h4>
+      <p>That effective communication operations directly influence a product's marketing and sales — day-to-day content execution connects to commercial outcomes.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">CapCut Pro</span><span class="tag">Platform analytics</span><span class="tag">Content calendar</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View FULU content on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-podcast" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">Audio · Research Podcast</div>
+      <h3>WellTech Talk: Aging &amp; Isolation</h3>
+      <h4>Background</h4>
+      <p>A research-driven podcast on how information and communication technologies can reduce social isolation among older adults.</p>
+      <h4>My role</h4>
+      <p>Guest researcher across five segments, covering what ICT can do, how well it works, and where it should go next.</p>
+      <h4>Basis</h4>
+      <p>Built on a systematic review of 28 empirical studies screened from 147 papers published 2020–2024.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Audition</span><span class="tag">Avatar Voice AI</span><span class="tag">Panel format</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">Listen on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-peerseries" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">Interview Series</div>
+      <h3>Peer-Interview Podcast Series</h3>
+      <h4>Background</h4>
+      <p>An independently produced interview series built around peer conversation and community discussion.</p>
+      <h4>My role</h4>
+      <p>Hosted, recorded and edited episodes end to end, and managed promotion and audience engagement across social platforms.</p>
+      <h4>Relevance</h4>
+      <p>The hosting and moderation side of this transfers directly to webinars, panels and live-session work.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Audition</span><span class="tag">Interview hosting</span><span class="tag">Audio editing</span><span class="tag">Community engagement</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">Listen on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-ford" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <img src="ford-poster.jpg" alt="Ford F-150 Lightning poster" class="modal-media">
+    <div class="modal-body">
+      <div class="meta">Campaign Asset · CCT260</div>
+      <h3>Ford F-150 Lightning Poster</h3>
+      <h4>Background</h4>
+      <p>A promotional poster for the 2025 Ford F-150 Lightning Platinum, conveying innovation, power and sustainability.</p>
+      <h4>Process</h4>
+      <p>Competitive analysis against Tesla Cybertruck and Mercedes EQ, brand research, sketching, moodboards, then final production and mockup placement.</p>
+      <h4>Design decisions</h4>
+      <p>Gestalt-based composition, a black background with greenish-blue and white type for electric energy, bold headline typography, and a QR code driving test-drive bookings.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Mockup placement</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View the poster on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-airbnb" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <img src="airbnb-hero.jpg" alt="B&B property hero image" class="modal-media">
+    <div class="modal-body">
+      <div class="meta">Multi-Platform Campaign</div>
+      <h3>B&amp;B Multi-Platform Marketing</h3>
+      <h4>Background</h4>
+      <p>Independent management of all digital marketing for a short-term rental across Airbnb and Vrbo.</p>
+      <h4>My role</h4>
+      <p>Seasonal campaigns with refreshed visual content, dynamic pricing, and guest communications from enquiry to review.</p>
+      <h4>Offline-to-online</h4>
+      <p>Designed branded welcome gifts — magnets and tote bags printed with QR codes linking to the property's social profiles — converting satisfied guests into followers.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Canva</span><span class="tag">Adobe CC</span><span class="tag">Airbnb</span><span class="tag">Vrbo</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View the campaign on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-eren" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">Front-End · CCT260</div>
+      <h3>Eren Yeager Fan Page</h3>
+      <h4>Background</h4>
+      <p>A five-page interactive fan website, built with one teammate and deployed live on GitHub Pages.</p>
+      <h4>Process</h4>
+      <p>Started with Figma wireframes to settle structure before coding, then built responsive HTML and CSS with media queries tested across breakpoints.</p>
+      <h4>Details</h4>
+      <p>Sticky navigation with breadcrumbs, a contact form, an image gallery with controls, and image optimisation for faster loading.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span><span class="tag">Figma</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-zara" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">UX Audit · CCT260</div>
+      <h3>ZARA Website Audit &amp; Redesign</h3>
+      <h4>Background</h4>
+      <p>A heuristic evaluation and redesign of ZARA Canada's e-commerce experience, with a three-member team.</p>
+      <h4>Findings</h4>
+      <p>No search function at all, weak visual hierarchy, pricing hidden behind multiple clicks, and a non-standard payment layout adding friction at checkout.</p>
+      <h4>Redesign</h4>
+      <p>Added a prominent search box, larger type with balanced image-to-text ratios, upfront pricing, and a transparent order summary throughout checkout.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Nielsen's heuristics</span><span class="tag">Journey mapping</span><span class="tag">Accessibility review</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View the case study on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-legible" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">UX Case Study · CCT305</div>
+      <h3>Legible — Bill Simplification</h3>
+      <h4>Background</h4>
+      <p>A web application that makes phone, utility and streaming bills understandable through plain language and progressive disclosure. Five-member team, three iterations over eight weeks.</p>
+      <h4>My role</h4>
+      <p>Built the first low-fidelity Figma prototype from team wireframes, translating research into a six-page information architecture, and later produced the high-fidelity storyboard.</p>
+      <h4>Research</h4>
+      <p>Think-aloud interviews with 11 participants surfaced five pain points; usability testing with 5 participants exposed upload confusion and a routing bug that shaped the final redesign.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Figma</span><span class="tag">Usability testing</span><span class="tag">Affinity diagrams</span><span class="tag">UCD</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View the case study on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-sce" onclick="if(event.target===this)closeM()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeM()">×</button>
+    <div class="modal-body">
+      <div class="meta">Platform Design · CCT318</div>
+      <h3>Smart Commute Exchange</h3>
+      <h4>Background</h4>
+      <p>A tri-campus platform proposal to reduce student reliance on private vehicles across UTM, UTSG and UTSC.</p>
+      <h4>Design</h4>
+      <p>A student app with real-time TTC and MiWay data plus cost comparisons against driving, and an anonymised dashboard giving student unions evidence to advocate for service improvements.</p>
+      <h4>Research</h4>
+      <p>Semi-structured interviews, focus groups on incentives, surveys, journey maps and stakeholder interviews with student union representatives. Aligned with UN SDG 11.</p>
+      <h4>Tools</h4>
+      <div class="stack"><span class="tag">Interviews</span><span class="tag">Surveys</span><span class="tag">Journey maps</span><span class="tag">Data dashboard IA</span></div>
+      <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/ray-chang-44bba5239/" target="_blank" rel="noopener">View the proposal on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Ray Chang · <a href="index.html">Mediara AI</a> · <a href="research.html">Research</a> · <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+  function openM(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeM() {
+    document.querySelectorAll('.modal.open').forEach(function (m) { m.classList.remove('open'); });
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeM(); });
+</script>
+
+</body>
+</html>

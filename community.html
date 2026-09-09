@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community — Mediara AI | Ray Chang</title>
+  <meta name="description" content="The Mediara AI community: share work created with the engine, discuss multi-agent creation workflows and get updates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .channel {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 18px 20px; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--bg-card); margin-bottom: 14px;
+    }
+    .channel .hash {
+      font-size: 1.1rem; color: var(--green); font-weight: 700;
+      min-width: 24px; text-align: center; line-height: 1.4;
+    }
+    .channel h3 { font-size: 0.98rem; margin-bottom: 4px; }
+    .channel p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+    .join-box {
+      background: linear-gradient(135deg, var(--bg-elev), var(--bg-card));
+      border: 1px solid var(--border); border-radius: 18px;
+      padding: 34px; text-align: center;
+    }
+    .join-box h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    .join-box p { color: var(--muted); max-width: 520px; margin: 0 auto 22px; font-size: 0.93rem; }
+    .discord-widget {
+      border: 1px solid var(--border); border-radius: 14px;
+      background: var(--bg-card); padding: 22px; margin-top: 22px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ray <span>Chang</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Mediara AI</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="community.html" class="active">Community</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" style="min-height:auto; padding-top:70px; padding-bottom:40px;">
+  <span class="badge badge-live"><span class="dot"></span>Mediara AI</span>
+  <h1 style="font-size:clamp(2rem,5vw,3.1rem); margin:16px 0 14px;">Community</h1>
+  <p class="tagline">For people building with multi-agent creation</p>
+  <p class="desc">
+    A space to share what you've made with Mediara AI, compare workflows, and discuss multi-agent
+    orchestration and accessible interaction design.
+  </p>
+
+  <div class="callout" style="margin-bottom:0; text-align:left;">
+    <strong>Community vs Contact:</strong> this page is for talking with other users.
+    To reach me directly — about roles, collaborations or a demo — use
+    <a href="contact.html" style="color:var(--green);">Contact</a>.
+  </div>
+</section>
+
+<!-- ============ CHANNELS ============ -->
+<section style="padding-top:30px;">
+  <div class="section-label">Channels</div>
+  <h2>What happens where</h2>
+  <p class="lead">Three channels, each with a clear purpose so discussion stays useful.</p>
+
+  <div class="channel">
+    <div class="hash">#</div>
+    <div>
+      <h3>announcements</h3>
+      <p>Mediara AI release notes and progress updates — new agent roles, capability changes and what is being tested next.</p>
+    </div>
+  </div>
+
+  <div class="channel">
+    <div class="hash">#</div>
+    <div>
+      <h3>demo-share</h3>
+      <p>Post work you generated with Mediara AI: short films, articles, campaign plans. Feedback and process notes welcome.</p>
+    </div>
+  </div>
+
+  <div class="channel">
+    <div class="hash">#</div>
+    <div>
+      <h3>tech-discuss</h3>
+      <p>Multi-agent orchestration, prompt and workflow design, accessibility and novel interaction — the technical layer under the product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOIN ============ -->
+<section>
+  <div class="join-box">
+    <h3>Join the Discord</h3>
+    <p>
+      The community runs on Discord — it is the quickest way to share output, ask questions and follow
+      development as it happens.
+    </p>
+    <!--
+      TODO: replace href below with the real Discord invite once the server is created.
+      Until then the button routes to Contact so nobody hits a dead link.
+    -->
+    <a href="contact.html" class="btn btn-primary">Join Discord</a>
+    <p style="font-size:0.82rem; margin-top:16px; margin-bottom:0;">
+      Server not open yet? Request access and you'll be added as an early member.
+    </p>
+
+    <div class="discord-widget">
+      <p style="margin:0; font-size:0.86rem; color:var(--dim);">
+        Discord widget embed goes here — the official widget iframe can be dropped into this box once
+        the server exists, giving a live member count and channel list without maintaining a forum.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTHER CHANNELS ============ -->
+<section>
+  <div class="section-label blue">Also available</div>
+  <h2>Other ways to discuss</h2>
+
+  <div class="grid grid-3" style="margin-top:8px;">
+    <div class="tile">
+      <h3>GitHub Discussions</h3>
+      <p>
+        Planned for feature requests and bug reports once the codebase is public. Better suited to
+        developers than to creators, so Discord stays the main space.
+      </p>
+    </div>
+    <div class="tile">
+      <h3>Direct feedback</h3>
+      <p>
+        Prefer to write privately? Send notes through
+        <a href="contact.html" style="color:var(--green);">Contact</a> — feedback there feeds straight
+        into the roadmap.
+      </p>
+    </div>
+    <div class="tile">
+      <h3>Accessibility input</h3>
+      <p>
+        If you use assistive technology, I especially want to hear what does not work. Accessibility
+        issues get priority over new features.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDELINES ============ -->
+<section>
+  <div class="section-label purple">Guidelines</div>
+  <h2>How we keep it useful</h2>
+
+  <div class="grid grid-3" style="margin-top:8px;">
+    <div class="tile">
+      <h3>Show the work</h3>
+      <p>When sharing output, include the brief or input. Without it, results are hard to learn from.</p>
+    </div>
+    <div class="tile">
+      <h3>Prototype honesty</h3>
+      <p>Mediara AI is in testing. Share what actually happened, including failures — that is the useful part.</p>
+    </div>
+    <div class="tile">
+      <h3>Accessible by default</h3>
+      <p>Add alt text and captions where relevant. It is a community about making things usable for everyone.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Ray Chang · <a href="index.html">Mediara AI</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
+</footer>
+
+</body>
+</html>

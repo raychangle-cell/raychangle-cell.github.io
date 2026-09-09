@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediara AI — Multi-Agent All-Media Creation Engine | Ray Chang</title>
+  <meta name="description" content="Mediara AI — a multi-agent all-media creation engine. Turn photos into cinematic short films, generate WeChat articles, and auto-plan personal content campaigns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ray <span>Chang</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Mediara AI</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <span class="badge badge-testing"><span class="dot"></span>Prototype — Demo Available</span>
+  <h1 style="margin-top:18px;">Mediara AI</h1>
+  <p class="tagline">Multi-Agent All-Media Creation Engine</p>
+  <p class="desc">
+    Driven by a cluster of specialised agents: upload photos to generate cinematic short films,
+    produce WeChat Official Account articles (公众号) in one pass, and auto-plan personal content
+    campaigns — image, text and video creation in a single workflow.
+  </p>
+  <div class="hero-cta">
+    <a href="#get-started" class="btn btn-primary">Request Demo Access</a>
+    <a href="#how" class="btn btn-ghost">How it works</a>
+  </div>
+
+  <div class="demo-frame">
+    <div class="bar">
+      <i></i><i></i><i></i>
+      <span>mediara — demo walkthrough</span>
+    </div>
+    <div class="stage">
+      <div class="ph-icon">▶</div>
+      <div>Demo walkthrough video</div>
+      <div style="font-size:0.8rem; opacity:0.7;">Screen recording of the running prototype — inserted here</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE CAPABILITIES ============ -->
+<section id="capabilities">
+  <div class="section-label">Core Capabilities</div>
+  <h2>What it does</h2>
+  <p class="lead">
+    Four capabilities, each handled by a dedicated agent and coordinated end-to-end — from a single
+    input to finished, publishable assets.
+  </p>
+
+  <div class="grid grid-4">
+    <div class="tile">
+      <div class="ico">🎬</div>
+      <h3>Video Generation</h3>
+      <p>Turn still photos into cinematic short films with customisable visual style and soundtrack.</p>
+    </div>
+    <div class="tile">
+      <div class="ico">✍️</div>
+      <h3>Copywriting</h3>
+      <p>Draft WeChat Official Account articles (公众号) and narrative scripts ready for editing and publishing.</p>
+    </div>
+    <div class="tile">
+      <div class="ico">📣</div>
+      <h3>Campaign Planning</h3>
+      <p>Auto-generate personal content campaign plans — themes, cadence and channel mix.</p>
+    </div>
+    <div class="tile">
+      <div class="ico">📊</div>
+      <h3>Performance Analytics</h3>
+      <p>Analyse audience and content performance so the next round of topics is chosen from data, not guesswork.</p>
+    </div>
+  </div>
+
+  <p class="engine-note">
+    Underlying engine: <code>MultimediaExpert-Squad</code> — a multi-agent orchestration system that assigns
+    each stage of production to a specialised agent and keeps quality consistent across the pipeline.
+  </p>
+</section>
+
+<!-- ============ LATEST UPDATE ============ -->
+<section id="updates">
+  <div class="section-label blue">Latest Update</div>
+  <h2>Development progress</h2>
+  <p class="lead">
+    Where the prototype stands today, and what is being worked on next.
+  </p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">Current</div>
+      <h3>Prototype complete — full pipeline running</h3>
+      <p>
+        The end-to-end flow works: an input brief is routed through the orchestration hub to the
+        specialised agents, and returns video, copy and a campaign plan. Available as a guided demo.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Recent</div>
+      <h3>Agent roles expanded</h3>
+      <p>
+        Split production into distinct agent responsibilities — image understanding, video rendering,
+        copywriting and campaign planning — so each stage can be improved independently.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">In progress</div>
+      <h3>Interaction and controls refinement</h3>
+      <p>
+        Tightening style and soundtrack controls, and reducing the manual steps between drafting,
+        generating and reviewing output.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Next</div>
+      <h3>Wider trial access and packaged build</h3>
+      <p>
+        Opening demo access to more testers, then packaging a distributable build. Not available for
+        download yet — access is currently by request.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="section-label purple">How it works</div>
+  <h2>Inside the engine</h2>
+  <p class="lead">
+    Mediara AI is not a single model responding to a prompt. It is a set of specialised agents
+    coordinated by an orchestration hub, each owning one part of the production chain.
+  </p>
+
+  <div class="demo-frame">
+    <div class="bar">
+      <i></i><i></i><i></i>
+      <span>MultimediaExpert-Squad — agent orchestration</span>
+    </div>
+    <div style="padding:26px 20px; overflow-x:auto;">
+      <svg viewBox="0 0 760 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Diagram: a brief enters the orchestration hub, which dispatches tasks to four specialised agents — image understanding, video rendering, copywriting and campaign planning — whose outputs are assembled into final assets, with performance analytics feeding the next cycle.">
+        <defs>
+          <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00d084"/><stop offset="100%" stop-color="#4dabf7"/>
+          </linearGradient>
+        </defs>
+
+        <rect x="16" y="98" width="112" height="52" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="72" y="121" text-anchor="middle" fill="#a1a1aa" font-family="Inter" font-size="12">Brief / Photos</text>
+        <text x="72" y="137" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">input</text>
+
+        <rect x="168" y="86" width="150" height="76" rx="14" fill="#0b0c10" stroke="url(#hub)" stroke-width="1.6"/>
+        <text x="243" y="114" text-anchor="middle" fill="#f4f4f5" font-family="Inter" font-size="13" font-weight="700">Orchestration</text>
+        <text x="243" y="132" text-anchor="middle" fill="#f4f4f5" font-family="Inter" font-size="13" font-weight="700">Hub</text>
+        <text x="243" y="150" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">dispatch &amp; QA</text>
+
+        <rect x="374" y="14" width="176" height="52" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="462" y="37" text-anchor="middle" fill="#00d084" font-family="Inter" font-size="12" font-weight="600">Image Understanding</text>
+        <text x="462" y="53" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">parse photos, style intent</text>
+
+        <rect x="374" y="78" width="176" height="52" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="462" y="101" text-anchor="middle" fill="#00d084" font-family="Inter" font-size="12" font-weight="600">Video Rendering</text>
+        <text x="462" y="117" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">shots, transitions, score</text>
+
+        <rect x="374" y="142" width="176" height="52" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="462" y="165" text-anchor="middle" fill="#4dabf7" font-family="Inter" font-size="12" font-weight="600">Copywriting</text>
+        <text x="462" y="181" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">articles, scripts, headlines</text>
+
+        <rect x="374" y="206" width="176" height="38" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="462" y="229" text-anchor="middle" fill="#a78bfa" font-family="Inter" font-size="12" font-weight="600">Campaign Planning</text>
+
+        <rect x="606" y="98" width="140" height="52" rx="11" fill="#0b0c10" stroke="#3a3d4a"/>
+        <text x="676" y="121" text-anchor="middle" fill="#f4f4f5" font-family="Inter" font-size="12" font-weight="600">Final Assets</text>
+        <text x="676" y="137" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">review &amp; publish</text>
+
+        <path d="M128 124 H164" stroke="#52525b" stroke-width="1.5"/>
+        <path d="M318 108 L370 40" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M318 118 L370 104" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M318 130 L370 168" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M318 142 L370 225" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M550 40 H602 V124" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M550 104 H602" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M550 168 H602 V130" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M550 225 H602 V136" stroke="#52525b" stroke-width="1.4"/>
+        <path d="M676 150 V238 H243 V166" stroke="#3f3f46" stroke-width="1.2" stroke-dasharray="4 4" fill="none"/>
+        <text x="450" y="248" text-anchor="middle" fill="#71717a" font-family="Inter" font-size="10">performance analytics feed the next cycle</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GET STARTED ============ -->
+<section id="get-started">
+  <div class="section-label orange">Get Started</div>
+  <h2>Try the demo</h2>
+  <p class="lead">
+    Mediara AI is currently at prototype stage. The full pipeline runs and a guided demo is available —
+    access is by request while testing continues.
+  </p>
+
+  <div class="grid grid-2">
+    <div class="tile">
+      <h3>Request demo access</h3>
+      <p style="margin-bottom:16px;">
+        Get a walkthrough of the running prototype: photo-to-film generation, article drafting,
+        campaign planning and the analytics view.
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-sm">Request access</a>
+    </div>
+    <div class="tile">
+      <h3>What is not available yet</h3>
+      <p>
+        No public download and no open repository at this stage — the build is still being tested.
+        A distributable version is planned; see <a href="#updates" style="color:var(--green);">development progress</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="section-label">FAQ</div>
+  <h2>Common questions</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Is Mediara AI a large language model?</h3>
+      <p>
+        No. It builds on top of existing foundation models. The core contribution is the multi-agent
+        orchestration system — <code style="color:var(--green);">MultimediaExpert-Squad</code> — that divides
+        production across specialised agents. No neural network weights are trained from scratch.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h3>What stage is it at?</h3>
+      <p>
+        Prototype. Core functionality works end to end and is being tested and refined. It is not yet
+        deployed for production use, so no production performance figures are published.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h3>Why a multi-agent design?</h3>
+      <p>
+        A single prompt rarely produces good video, copy and a campaign plan at once. Splitting the work
+        lets each stage be tuned on its own, and makes failures easier to isolate and fix.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Ray Chang · <a href="index.html">Mediara AI</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
+</footer>
+
+</body>
+</html>
